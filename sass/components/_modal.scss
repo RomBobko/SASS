@@ -37,26 +37,21 @@
                 0 1px 1px 0 rgba(0, 0, 0, 0.14),
                 0 2px 1px 0 rgba(0, 0, 0, 0.20);
 
+    &__close {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: var(--white-color);
+        border: none;
+        cursor: pointer;
+    }
 }
 
-.backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(1.1);
-}
-
-
-.modal-close {
-    position: absolute;
-    top: 14px;
-    right: 14px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: var(--white-color);
-    border: none;
-    cursor: pointer;
-}
 
 .form-title {
     font-size: 20px;
