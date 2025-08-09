@@ -1,108 +1,36 @@
 /* feature */
-.feature-list {
+.features {
     display: flex;
     justify-content: space-between;
-}
 
-.feature-list .item {
-    width: 270px;
-}
+    &__item {
+        width: 270px;
+    }
 
-.feature-background {
-    background-color: var(--portfolio-button-color);
+    &__background {
+        background-color: $portfolio-button-color;
+        border-radius: 4px;
+        margin-bottom: 30px;
+    }
 
-    border-radius: 4px;
+    &__icon {
+        margin: 25px 100px;
+        width: 70px;
+        height: 70px;
+    }
 
-    margin-bottom: 30px;
-}
-
-.features-icon {
-    /* background-color: var(--portfolio-button-color); */
-
-    margin: 25px 100px;
-    width: 70px;
-    height: 70px;
-}
-
-
-/* .feature-list .item::before {
-    display: block;
-    content: "";
-    height: 120px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-
-    background-color: var(--portfolio-button-color);
-    background-repeat: no-repeat;
-    background-position: center;
-} */
-
-/* .feature-list .icon-antenna::before {
-    background-image: url(../images/antenna.svg);
-}
-
-.feature-list .icon-clock::before {
-    background-image: url(../images/clock.svg);
-}
-
-.feature-list .icon-diagram::before {
-    background-image: url(../images/diagram.svg);
-}
-
-.feature-list .icon-astronaut::before {
-    background-image: url(../images/astronaut.svg);
-} */
-
-/* .feature-list .item:nth-child(1)::before {
-    background-image: url(../images/antenna.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.feature-list .item:nth-child(2)::before {
-    background-image: url(../images/clock.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.feature-list .item:nth-child(3)::before {
-    background-image: url(../images/diagram.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.feature-list .item:nth-child(4)::before {
-    background-image: url(../images/astronaut.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-} */
-
-.feature-list .item + .item {
-    margin-left: 30px;
-}
-
-.feature-list .title {
-    color: var(--secondary-text-color);
+    &__title {
+    color: $secondary-text-color;
 
     font-weight: 700;
     font-size: 14px;
     margin-top: 0;
     margin-bottom: 10px;
-}
+    }
 
-.feature-list .text {
+    &__text {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.7;
+    }
 }
-/* .feature .text {
-    color: green;
-}
-.feature .warning {
-    color: yellow;
-}
-.text.practice {
-    color: aqua;
-} */

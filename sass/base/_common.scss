@@ -1,17 +1,6 @@
-:root {
-    --accent-color: #2196F3;
-    --black-color: #000000;
-    --white-color: #FFFFFF;
-    --footer-color: #2F303A;
-    --primary-text-color: #757575;
-    --secondary-text-color: #212121;
-    --portfolio-button-color: rgba(245, 244, 250, 1);
-    --button-text-color: #212121;
-}
-
 body {
-    background-color: var(--white-color);
-    color: var(--primary-text-color);
+    background-color: $white-color;
+    color: $primary-text-color;
 
     max-width: 1600px;
     margin-left: auto;
@@ -29,7 +18,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--secondary-text-color);
+    color: $secondary-text-color;
 }
 
 ul {
@@ -67,7 +56,7 @@ a {
 .section {
     margin-bottom: 94px;
     
-    &-title {
+    &__title {
         color: $secondary-text-color;
 
         font-weight: 700;
