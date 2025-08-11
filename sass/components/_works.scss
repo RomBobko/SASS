@@ -1,4 +1,9 @@
-/* work */
+// /* work */
+// mobile-first
+.section-work {
+    display: none;
+}
+
 .work {
     @extend %centered-flex;
     gap: 30px;

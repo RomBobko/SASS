@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+.subscribe__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;
@@ -270,11 +276,9 @@ summary {
 }
 
 body {
-  background-color: #FFFFFF;
   color: #757575;
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  text-align: center;
   font-family: Roboto, sans-serif;
   font-weight: 400;
   line-height: 1;
@@ -287,6 +291,7 @@ h3,
 h4,
 h5,
 h6 {
+  text-align: center;
   color: #212121;
 }
 
@@ -310,26 +315,31 @@ a {
 /* container */
 .container {
   /* outline: 2px solid rgb(13, 79, 42); */
-  width: 1230px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 60px 15px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.container--team {
+  background-color: #f5f4fa;
 }
 .container p {
   margin-top: 0;
   margin-bottom: 0;
 }
-
-.section {
-  margin-bottom: 94px;
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
 }
+
 .section__title {
   color: #212121;
   font-weight: 700;
   font-size: 36px;
-  letter-spacing: 1.1px;
+  letter-spacing: 0.8px;
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
@@ -338,88 +348,37 @@ a {
   background-color: #2196F3;
   display: inline-block;
   border-radius: 4px;
-  width: 216px;
+  width: 200px;
   font-weight: 700;
   text-align: center;
   font-size: 16px;
   line-height: 1.8;
-  padding: 10px 32px;
+  padding: 10px 24px;
+  letter-spacing: 0.9px;
+  margin: 0 auto;
 }
-
 .header {
+  padding: 16px 15px;
+  height: 60px;
   display: flex;
-  align-items: center;
-  background-color: #FFFFFF;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 0.3px;
+  justify-content: space-between;
 }
 .header__logo {
   color: #000000;
-  margin-left: 200px;
-  padding-left: 15px;
-  margin-right: 93px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .header__logo > span {
   color: #2196F3;
 }
-
-.site-nav {
-  display: flex;
-}
-.site-nav__item + .site-nav__item {
-  margin-left: 50px;
-}
-.site-nav__link {
-  color: #212121;
-  display: block;
-  padding: 32px 0;
-}
-.site-nav__link:hover, .site-nav__link:focus {
-  color: #2196F3;
-}
-.site-nav__link--current {
-  position: relative;
-  color: #2196F3;
-}
-.site-nav__link--current::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 4px;
-  width: 100%;
-  background-color: #2196F3;
-  border-radius: 2px;
+@media screen and (min-width: 480px) {
+  .header {
+    width: 480px;
+    margin: 0 auto;
+  }
 }
 
+.site-nav,
 .auth-nav {
-  display: flex;
-  margin-left: auto;
-  margin-right: 200px;
-}
-.auth-nav__item + .auth-nav__item {
-  margin-left: 50px;
-}
-.auth-nav__link {
-  color: inherit;
-  display: inline-flex;
-  align-items: center;
-  padding: 32px;
-}
-.auth-nav__link:hover, .auth-nav__link:focus {
-  color: #2196F3;
-}
-.auth-nav__icon {
-  display: inline-block;
-  padding: 0;
-  margin-right: 10px;
-  fill: #757575;
-  background-size: contain;
-}
-.auth-nav__item:hover .auth-nav__icon {
-  fill: #2196F3;
+  display: none;
 }
 
 h1 {
@@ -537,8 +496,6 @@ button:focus {
 /* footer */
 .footer {
   background-color: #2F303A;
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
 .footer__box {
   display: inline-flex;
@@ -552,11 +509,18 @@ button:focus {
 .footer__logo > span {
   color: #2196F3;
 }
+@media screen and (min-width: 480px) {
+  .footer {
+    width: 480px;
+    margin: 0 auto;
+  }
+}
 
 .address {
   display: inline-flex;
   flex-direction: column;
   gap: 9px;
+  margin-bottom: 60px;
   /* width: 231px; */
   /* height: 84px; */
 }
@@ -577,19 +541,18 @@ button:focus {
 .subscribe {
   display: inline-flex;
   flex-direction: column;
-  margin-left: 70px;
   /* outline: 1px solid wheat; */
 }
 .subscribe__title {
   display: inline-block;
   margin: 0;
   margin-bottom: 20px;
-  color: var(--white-color);
+  color: #FFFFFF;
   font-weight: 700;
   font-size: 14px;
+  text-transform: uppercase;
 }
 .subscribe__list {
-  display: flex;
   gap: 10px;
 }
 
