@@ -15,17 +15,21 @@
     &__item {
         background-color: $white-color;
         text-align: center;
-
+        box-shadow: 
+        0 1px 3px 0 rgba(0, 0, 0, 0.12),
+        0 1px 1px 0 rgba(0, 0, 0, 0.14),
+        0 2px 1px 0 rgba(0, 0, 0, 0.20);
 
         &:not(:last-child) {
             margin-bottom: 30px;
         }
 
         // max-width: 270px;
-        box-shadow: 
-        0px 4px 4px rgba(0, 0, 0, 0.25),
-        0px 1px 3px rgba(0, 0, 0, 0.12),
-        0px 1px 1px rgba(0, 0, 0, 0.14);
+        // див.tablet-desktop
+        // box-shadow: 
+        // 0px 4px 4px rgba(0, 0, 0, 0.25),
+        // 0px 1px 3px rgba(0, 0, 0, 0.12),
+        // 0px 1px 1px rgba(0, 0, 0, 0.14);
     }
 
     &__title {

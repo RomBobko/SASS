@@ -16,11 +16,15 @@ body {
     color: $primary-text-color;
     margin: 0 auto;
     
-    text-align: center;
+
     font-family: Roboto, sans-serif;
     font-weight: 400;
     line-height: 1;
     letter-spacing: 0.4px;
+}
+
+body.modal-open {
+    overflow: hidden;
 }
 
 h1,
@@ -29,8 +33,8 @@ h3,
 h4,
 h5,
 h6 {
-    text-align: center;
     color: $secondary-text-color;
+    margin: 0;
 }
 
 ul {
@@ -50,6 +54,11 @@ a {
     font-style: normal;
 }
 
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 
 /* container */
 .container {
@@ -58,16 +67,13 @@ a {
     padding: 60px 15px;
     // text-align: center;
     margin: 0 auto;
-        display: flex;
+    display: flex;
     flex-direction: column;
 
     &--team {
         background-color: $portfolio-button-color;
     }
-    p {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
+
 
     @media screen and (min-width: $mobile) {
         width:480px
@@ -88,31 +94,13 @@ a {
         margin-bottom: 30px;
 
         text-align: center;
+
+        &--visually-hidden {
+            @extend %visually-hidden;
+        }
     }
 }
 
-.visually-hidden {
+.visually-hidden__title {
     @extend %visually-hidden;
-}
-
-.button {
-    color: $white-color;
-    background-color: $accent-color;
-
-    display: inline-block;
-    border-radius: 4px;
-    width: 200px;
-    font-weight: 700;
-    text-align: center;
-    font-size: 16px;
-    line-height: 1.8;
-    padding: 10px 24px;
-    letter-spacing: 0.9px;
-    margin: 0 auto;
-
-    @media screen and (min-width: $mobile) {
-        // width:216px;
-        // padding: 10px;
-    }
-
 }

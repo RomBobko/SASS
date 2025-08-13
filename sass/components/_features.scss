@@ -1,4 +1,6 @@
 /* feature */
+
+
 .features {
     // display: flex;
     // justify-content: space-between;
@@ -27,6 +29,7 @@
     &__title {
     color: $secondary-text-color;
 
+    text-align: center;
     font-weight: 700;
     font-size: 14px;
     margin-top: 0;

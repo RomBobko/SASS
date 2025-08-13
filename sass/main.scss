@@ -1,6 +1,8 @@
 @import './utils/variables';
 @import './utils/mixins';
 @import './utils/placeholders';
+// @import '../js/menu.js';
+// @import '../js/modal.js';
 
 @import './base/normalize';
 @import './base/fonts';
@@ -8,10 +10,11 @@
 
 @import './components/header';
 @import './components/hero';
-// @import './components/modal';
+@import './components/modal';
 @import './components/features';
 @import './components/works';
 @import './components/team';
 @import './components/clients';
 @import './components/footer';
+@import './components/menu';
 

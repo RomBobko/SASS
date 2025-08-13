@@ -1,10 +1,21 @@
 .header {
+    position: relative;
     padding: 16px 15px;
     height: 60px;
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
+
+    border-bottom: 1px solid #ECECEC;
+
+    @media screen and (min-width: $mobile) {
+        width: 480px;
+        margin: 0 auto;
+    }
+
 
     &__logo {
+        
         @extend %logo-style;
         color: $black-color;
 
@@ -12,17 +23,87 @@
             color: $accent-color;
         }
     }
+}
 
-    @media screen and (min-width: $mobile) {
-        width: 480px;
-        margin: 0 auto;
+.site-nav {
+
+    &__item {
+        @media screen and (max-width: 767px) {
+            &:not(:last-child) {
+                margin-bottom: 35px;
+            }
+        }
+    }
+
+    &__link {
+        color: $secondary-text-color;
+        display: block;
+
+        &:hover,
+        &:focus {
+            color: $accent-color;
+        }
+
+        &--current {
+            color: $accent-color;
+        }
+
+    }
+
+    @media screen and (max-width: 767px) {
+        text-align: left;
+        font-size: 40px;
+        font-weight: 500;
+        letter-spacing: 0.8px;
+        margin-bottom: 302px;
     }
 }
 
-.site-nav,
+
 .auth-nav {
-    display: none;
+    display: flex;
+
+    @media screen and (max-width: 767px) {
+        flex-direction: column-reverse;
+    }
+
+    &__item {
+        @media screen and (max-width: 767px) {
+            &:last-child {
+                margin-bottom: 32px;
+            }
+        }
+    }
+    &__link {
+        color: inherit;
+
+        @media screen and (max-width: 767px) {
+            font-size: 24px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+
+            &.smartphone {
+                color: $accent-color;
+                font-size: 34px;
+                letter-spacing: 0.7px;
+            }
+        }
+    }
+        
+    @media screen and (max-width: 767px) {
+
+        text-align: left;
+        font-weight: 500;
+        letter-spacing: 0.8px;
+        margin-bottom: 64px;
+    
+        &__icon {
+            display: none;
+        }
+    }
 }
+
+
 
 // .header {
     // display: flex;
@@ -52,22 +133,19 @@
 // .site-nav {
 //     display: flex;
 
-//     &__item {
+    // &__item {
         
-//         & + & {
-//             margin-left: 50px;
-//         }
-//     }
+    //     & + & {
+    //         margin-left: 50px;
+    //     }
+    // }
 
 //     &__link {
 //         color: $secondary-text-color;
 //         display: block;
 //         padding: 32px 0;
 
-//         &:hover,
-//         &:focus {
-//             color: $accent-color;
-//         }
+
 //     }
 
 //     &__link--current {

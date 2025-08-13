@@ -9,7 +9,7 @@
     background-position: center center;
     
 
-    // max-width: 1600px;
+    max-width: 1600px;
     // height: 600px;
     // padding-top: 200px;
     margin: 0 auto;
@@ -21,8 +21,6 @@
     @media screen and (min-width: $mobile) {
         width: 480px;
     }
-
-
 
     &__title {
         color: $white-color ;
@@ -38,6 +36,15 @@
             // font-size: 26px;
             // line-height: 1.6;
             // letter-spacing: 1.5px;
+        }
+    }
+
+    &__button {
+        @extend %button;
+
+        @media screen and (min-width: $mobile) {
+            // width:216px;
+            // padding: 10px;
         }
     }
 }

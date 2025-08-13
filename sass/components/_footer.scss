@@ -3,6 +3,7 @@
     background-color: $footer-color;
     // padding-top: 60px;
     // padding-bottom: 60px;
+    text-align: center;
 
     &__box {
         display: inline-flex;
@@ -56,6 +57,8 @@
 .subscribe {
     display: inline-flex;
     flex-direction: column;
+
+    margin-bottom: 60px;
     // margin-left: 70px;
     /* outline: 1px solid wheat; */
 
@@ -102,5 +105,59 @@
     }
     &:nth-child(4) {
         background-image: url(../images/linkedin\ 1.svg);
+    }
+}
+
+.footer-form {
+// mobile-first
+    &__title {
+        display: inline-block;
+        margin: 0;
+        margin-bottom: 20px;
+
+        color: $white-color;
+        font-weight: 700;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        padding: 15px 16px;
+        margin-bottom: 20px;
+        
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.30);
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+        background-color: $footer-color;
+
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.60);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.2;
+        }
+    }
+
+    &__button {
+        @extend %button;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        &::after {
+            content: '';
+            display: inline-block;
+
+            width: 24px;
+            height: 24px;
+
+
+            background-image: url(/images/icon-send.svg);
+            background-size: contain;
+            // background-repeat: no-repeat;
+
+        }
     }
 }
