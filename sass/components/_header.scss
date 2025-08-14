@@ -1,23 +1,46 @@
 .header {
     position: relative;
-    padding: 16px 15px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
     height: 60px;
     display: flex;
-    justify-content: space-between;
     margin: 0 auto;
-
     border-bottom: 1px solid #ECECEC;
 
-    @media screen and (min-width: $mobile) {
+    @media screen and (max-width: $mobile) {
         width: 480px;
         margin: 0 auto;
     }
+    @media screen and (min-width: $tablet) {
+        height: 80px;
+        width: 768px;
+        margin: 0 auto;
+        align-items: center;
+    }
+    @media screen and (min-width: $laptop) {
+       
+    }
 
+    @media screen and (min-width: $mobile) and (max-width: $tablet) {
+        width: 480px;
+    }
+
+    &__nav {
+        @media screen and (min-width: $tablet) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
 
     &__logo {
-        
         @extend %logo-style;
         color: $black-color;
+
+        @media screen {
+            
+        }
 
         > span {
             color: $accent-color;
@@ -25,19 +48,68 @@
     }
 }
 
+
 .site-nav {
+    display: flex;
+
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+        text-align: left;
+        font-size: 40px;
+        font-weight: 500;
+        letter-spacing: 0.8px;
+        margin-bottom: 302px;
+    }
+    @media screen and (min-width: $tablet) {
+        height: 100%;
+        align-items: center;
+        margin-right: 96px;
+    }
 
     &__item {
+        display: block;
+
+
         @media screen and (max-width: 767px) {
             &:not(:last-child) {
                 margin-bottom: 35px;
+            }
+        }
+        @media screen and (min-width: $tablet) {
+            display: block;
+            & + & {
+            margin-left: 50px;
             }
         }
     }
 
     &__link {
         color: $secondary-text-color;
-        display: block;
+
+        @media screen and (min-width: $tablet) {
+            display: block;
+            padding: 32px 0;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.25px;
+
+            &--current {
+                position: relative;
+                color: $accent-color;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 4px;
+                width: 100%;
+
+                background-color: $accent-color;
+                border-radius: 2px;
+                }
+            }
+        }
 
         &:hover,
         &:focus {
@@ -49,47 +121,10 @@
         }
 
     }
-
-    @media screen and (max-width: 767px) {
-        text-align: left;
-        font-size: 40px;
-        font-weight: 500;
-        letter-spacing: 0.8px;
-        margin-bottom: 302px;
-    }
 }
 
 
 .auth-nav {
-    display: flex;
-
-    @media screen and (max-width: 767px) {
-        flex-direction: column-reverse;
-    }
-
-    &__item {
-        @media screen and (max-width: 767px) {
-            &:last-child {
-                margin-bottom: 32px;
-            }
-        }
-    }
-    &__link {
-        color: inherit;
-
-        @media screen and (max-width: 767px) {
-            font-size: 24px;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-
-            &.smartphone {
-                color: $accent-color;
-                font-size: 34px;
-                letter-spacing: 0.7px;
-            }
-        }
-    }
-        
     @media screen and (max-width: 767px) {
 
         text-align: left;
@@ -101,75 +136,79 @@
             display: none;
         }
     }
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    &__icon {
+
+        @media screen and (min-width: $tablet) {
+            fill: $primary-text-color;
+            margin-right: 8px;
+
+            .auth-nav__item:hover &,
+            .auth-nav__item:focus & {
+                fill: $accent-color;
+            }
+        }
+    }
+
+    &__item {
+        @media screen and (max-width: 767px) {
+            &:not(:last-child) {
+                margin-bottom: 32px;
+            }
+        }
+        @media screen and (min-width: $tablet) {
+            &:not(:first-child) {
+                margin-bottom: 10px;
+            }
+            &:hover,
+            &:focus {
+                color: $accent-color;
+            }
+        }
+        @media screen and (min-width: $laptop) {
+            
+        }
+
+    }
+
+    &__link {
+        color: inherit;
+        
+        @media screen and (max-width: 767px) {
+            font-size: 24px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+
+            &.smartphone {
+                color: $accent-color;
+                font-size: 34px;
+                letter-spacing: 0.7px;
+            }
+        }
+        @media screen and (min-width: $tablet) {
+            display: inline-flex;
+            align-items: center;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.25px;
+        }
+    }
 }
 
 
-
-// .header {
-    // display: flex;
-    // align-items: center;
-    // background-color: $white-color;
-    // font-weight: 500;
-    // font-size: 14px;
-    // letter-spacing: 0.3px;
-
-    // &__logo {
+// &__logo {
     //     @extend %logo-style;
         // color: $black-color;
         // margin-left: 200px;
         // padding-left: 15px;
         // margin-right: 93px;
         // text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    //     > span {
-    //         color: $accent-color;
-    //     }
-    // }
-
-//     @media screen and (min-width: 480px) {
-//         width: 480px;
-//     }
-// }
-
-// .site-nav {
-//     display: flex;
-
-    // &__item {
-        
-    //     & + & {
-    //         margin-left: 50px;
-    //     }
-    // }
-
-//     &__link {
-//         color: $secondary-text-color;
-//         display: block;
-//         padding: 32px 0;
 
 
-//     }
-
-//     &__link--current {
-//         position: relative;
-//         color: $accent-color;
-
-//         &::after {
-//             content: "";
-//             position: absolute;
-//             left: 0;
-//             bottom: 0;
-//             height: 4px;
-//             width: 100%;
-
-//             background-color: $accent-color;
-//             border-radius: 2px;
-//         }
-//     }
-// }
-
-// .auth-nav {
-//     display: flex;
-//     margin-left: auto;
-//     margin-right: 200px;
 
 //     &__item {
 //         & + & {
@@ -189,16 +228,3 @@
 //             color: $accent-color;
 //         }
 //     }
-
-//     &__icon {
-//         display: inline-block;
-//         padding: 0;
-//         margin-right: 10px;
-//         fill: $primary-text-color;
-//         background-size: contain;
-
-//         .auth-nav__item:hover & {
-//             fill: $accent-color;
-//         }
-//     }
-// }

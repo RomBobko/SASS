@@ -1,13 +1,35 @@
 /* footer */
 .footer {
     background-color: $footer-color;
+    margin: 0 auto;
+    text-align: center;
     // padding-top: 60px;
     // padding-bottom: 60px;
-    text-align: center;
+
+    @media screen and (max-width: $mobile) {
+        width: 480px;
+    }
+    @media screen and (min-width: $tablet) {
+        width: 768px;
+    }
+    @media screen and (min-width: $mobile) and (max-width: $tablet) {
+        width: 480px;
+    }
+
+    &__adaptive {
+        @media screen and (max-width: 767px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
 
     &__box {
         display: inline-flex;
         flex-direction: column;
+
+        @media screen and (min-width: $tablet) {
+            margin-right: 165px;
+        }
     }
 
     &__logo {
@@ -21,10 +43,10 @@
         }
     }
 
-    @media screen and (min-width: $mobile) {
-        width: 480px;
-        margin: 0 auto;
-    }
+    // @media screen and (max-width: 767px) {
+    //     width: 480px;
+    //     margin: 0 auto;
+    // }
 }
 
 .address {
@@ -131,6 +153,11 @@
         border: 1px solid rgba(255, 255, 255, 0.30);
         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
         background-color: $footer-color;
+
+        @media screen and (min-width: $tablet) {
+            width: 450px;
+            margin: 0 auto 20px;
+        }
 
         &::placeholder {
             color: rgba(255, 255, 255, 0.60);
