@@ -4,13 +4,10 @@
     gap: 8px;
 
 
-    margin-bottom: 40px;
-    padding-right: 70px;
-
     &__item {
         display: inline-block;
+        
         padding: 6px 22px;
-
 
         color: $button-text-color;
         background-color: $portfolio-button-color;
@@ -31,29 +28,45 @@
         }
     }
 
-    @media screen and (min-width: $mobile) {
+    @media screen and (max-width: 767px) {
         width: 480px;
+        padding-right: 70px;
+        margin: 0 auto 40px;
+    }
+    @media screen and (min-width: $tablet) {
+        margin: 0 auto 30px;
+    }
+    @media screen and (min-width: $laptop) {
+        margin:0 auto 50px;
     }
 }
 
 
 .portfolio {
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: center;
-    // gap: 30px;
-
-
+    @media screen and (min-width: $tablet) {
+        margin: -15px;
+        display: flex;
+        flex-wrap: wrap;
+    }
 
     &__card {
-        // width: 370px;
         padding-bottom: 20px;
 
         border: 1px solid #EEE;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
 
-        &:not(:last-child) {
-            margin-bottom: 30px;
+        @media screen and (min-width: $tablet) {
+            width: calc((100% - 4 * 15px) / 2);
+            margin: 15px;
+        }
+        @media screen and (min-width: $laptop) {
+            width: calc((100% - 6 * 15px) / 3);
+        }
+
+        @media screen and (max-width: 767px) {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
         }
 
         &:hover,
@@ -96,7 +109,7 @@
     position: absolute;
     display: flex;
 
-    top: 0;
+    top: 1px;
     left: 0;
     width: 100%;
     height: 100%;

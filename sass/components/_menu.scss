@@ -4,6 +4,10 @@
     @media screen and (min-width: $tablet) {
         display: flex;
     }
+    @media screen and (min-width: $laptop) {
+        justify-content: space-between;
+        width: 100%;
+    }
 
     &.is-open {
 

@@ -8,14 +8,10 @@
     background-repeat: no-repeat;
     background-position: center center;
     
-
     max-width: 1600px;
-    // height: 600px;
-    // padding-top: 200px;
     margin: 0 auto;
     padding: 118px 60px;
 
-    // margin-bottom: 94px;
     text-align: center;
 
     @media screen and (max-width: $mobile) {
@@ -25,6 +21,13 @@
     @media screen and (min-width: $tablet) {
         height: 400px;
         width: 768px;
+        padding: 118px 204px;
+    }
+
+    @media screen and (min-width: $laptop) {
+        height: 600px;
+        padding: 200px;
+        width: 100%;
     }
 
     @media screen and (min-width: $mobile) and (max-width: $tablet) {
@@ -41,19 +44,20 @@
         letter-spacing: 1.5px;
         text-transform: uppercase;
 
-        @media screen and (min-width: $mobile) {
-            // font-size: 26px;
-            // line-height: 1.6;
-            // letter-spacing: 1.5px;
+        @media screen and (min-width: $laptop) {
+            width: 696px;
+            font-size: 44px;
+            line-height: 1.3;
+            letter-spacing: 2.64px;
         }
     }
 
     &__button {
         @extend %button;
 
-        @media screen and (min-width: $mobile) {
-            // width:216px;
-            // padding: 10px;
+        @media screen and (min-width: $laptop) {
+            width: 216px;
+            padding: 10px 32px;
         }
     }
 }

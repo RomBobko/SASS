@@ -1,29 +1,28 @@
-/* feature */
-
-
 .features {
-    // margin: -30px;
     @media screen and (min-width: $tablet) {
         display: flex;
         flex-wrap: wrap;
         margin: -15px;
     }
 
+
     &__item {
-        outline: 1px solid teal;
+        // outline: 1px solid teal;
+
         @media screen and (max-width: 767px) {
             &:not(:last-child) {
                 margin-bottom: 30px;
             }
         }
-
         @media screen and (min-width: $tablet) {
             width: calc((100% - 4 * 15px) / 2);
             margin: 15px;
         }
+        @media screen and (min-width: $laptop) {
+            width: calc((100% - 8 * 15px) / 4);
+        }
     }
     
-
 
     &__background {
         @extend %centered-flex;
@@ -38,7 +37,11 @@
         @media screen and (min-width: $tablet) {
             padding: 25px 142px;
         }
+        @media screen and (min-width: $laptop) {
+            padding: 25px 100px;
+        }
     }
+
 
     &__title {
     color: $secondary-text-color;
@@ -48,7 +51,12 @@
     font-size: 14px;
     margin-top: 0;
     margin-bottom: 10px;
+
+    @media screen and (min-width: $tablet) {
+        text-align: left;
+        }
     }
+
 
     &__text {
         color: $primary-text-color;
